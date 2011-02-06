@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import org.adligo.xml.parsers.template.TemplateParserEngine;
 import org.adligo.xml.parsers.template.jdbc.JdbcAggregator;
 import org.adligo.xml.parsers.template.jdbc.JdbcParamsDecorator;
-import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 

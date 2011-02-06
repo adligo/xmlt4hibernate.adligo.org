@@ -1,6 +1,5 @@
 package org.adligo.xml.parsers.template.hibernate;
 
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -8,7 +7,6 @@ import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
 import org.adligo.models.params.client.ValueTypes;
 import org.adligo.xml.parsers.template.jdbc.JdbcAggregator;
-import org.adligo.xml.parsers.template.jdbc.JdbcPopulator;
 import org.hibernate.Query;
 
 public class HibernatePopulator {
