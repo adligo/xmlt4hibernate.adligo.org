@@ -6,13 +6,13 @@ import java.util.Date;
 import org.adligo.i.log.client.Log;
 import org.adligo.i.log.client.LogFactory;
 import org.adligo.models.params.client.ValueTypes;
-import org.adligo.xml.parsers.template.jdbc.JdbcAggregator;
+import org.adligo.xml.parsers.template.jdbc.QueryParameterAggregator;
 import org.hibernate.Query;
 
 public class HibernatePopulator {
 	private static final Log log = LogFactory.getLog(HibernatePopulator.class);
 	
-	public static void setJdbcQuestionMarks(JdbcAggregator agg,Query stmt) throws SQLException {
+	public static void setJdbcQuestionMarks(QueryParameterAggregator agg,Query stmt) throws SQLException {
 		for (int i = 0; i < agg.size(); i++) {
 			Object value = agg.getValue(i);
 			short type = (Short) agg.getType(i);

@@ -3,7 +3,7 @@ package org.adligo.xml.parsers.template.hibernate;
 import java.sql.SQLException;
 
 import org.adligo.xml.parsers.template.TemplateParserEngine;
-import org.adligo.xml.parsers.template.jdbc.JdbcAggregator;
+import org.adligo.xml.parsers.template.jdbc.QueryParameterAggregator;
 import org.adligo.xml.parsers.template.jdbc.JdbcParamsDecorator;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
@@ -20,7 +20,7 @@ public class HibernateTemplateParserEngine {
 		 //does a null check for connection, params, and template
 		  // allowed operators is a internally managed set (never null)
 		  in.validate();
-		  JdbcAggregator aggregator = new JdbcAggregator();
+		  QueryParameterAggregator aggregator = new QueryParameterAggregator();
 		  JdbcParamsDecorator jdbcParams =	new JdbcParamsDecorator(in.getParams(), 
 				  in.getAllowedOperators(), aggregator);
 		  Session session = in.getSession();
