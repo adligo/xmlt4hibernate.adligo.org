@@ -1,5 +1,6 @@
 package org.adligo.xml.parsers.template.hibernate;
 
+import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.util.Date;
 
@@ -41,6 +42,9 @@ public class HibernatePopulator {
 						break;
 					case ValueTypes.BOOLEAN:
 						stmt.setBoolean(i, (Boolean) value); 
+						break;
+					case ValueTypes.BIG_DECIMAL:
+						stmt.setBigDecimal(i, (BigDecimal) value); 
 						break;
 					default:
 						throw new SQLException("Unknown type " + type +
