@@ -1,4 +1,4 @@
-package org.adligo.xml.parsers.template.hibernate;
+package org.adligo.xml.parsers.template_hibernate;
 
 import java.sql.SQLException;
 
